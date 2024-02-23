@@ -1,0 +1,180 @@
+/** @format */
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fcebeb;
+    display: flex;
+    place-content: center;
+    height: 100vh;
+}
+
+.app-container {
+    width: 375px; 
+    height: 667px;
+    margin: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px; 
+    overflow: hidden; 
+    position: relative; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+header {
+    background: #ff3b30;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    color: #555;
+    margin: 1em;
+}
+
+.clock-icon {
+    font-size: 5em;
+    margin: 0.25em;
+}
+
+.hours-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    opacity: 0.5; 
+    color: #555;
+}
+
+.fab {
+    background: #ff3b30;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.modal {
+    color: #555;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 90%; 
+    max-width: 340px; 
+    background: #FFF; 
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; 
+    z-index: 1000; 
+}
+
+.hour-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+}
+.select-container label {
+    margin-bottom: 10px; 
+}
+
+.hour-select {
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    outline: none; 
+    color: #555;
+}
+
+.number-input {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.number-btn {
+    border: 1px solid #ccc;
+    background: #f9f9f9; 
+    padding: 5px 10px; 
+    cursor: pointer; 
+}
+
+.hour-number,
+.number-input-btn {
+    flex: 1; 
+    text-align: center; 
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    cursor: pointer;
+    border: none; 
+    outline: none; 
+}
+
+.cancel-btn {
+    background: #ddd; 
+    color: #555; 
+}
+
+.save-btn {
+    background: #ff3b30; 
+    color: white; 
+}
+
+#add-hours-button:focus + .modal,
+.modal:target {
+    display: flex;
+}
